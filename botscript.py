@@ -614,13 +614,13 @@ def move_to_cameraslist(message):
     chat_id = message.chat.id
     text = "<b>Вы переместились в список камер</b>"
     cameras_menu = types.ReplyKeyboardMarkup()
-    button_entrance = types.KeyboardButton(cam_entrance)
-    button_childrens = types.KeyboardButton(cam_childrens)
-    button_yard = types.KeyboardButton(cam_yard)
-    button_kidsprofi = types.KeyboardButton(cam_kidsprofi)
+    cam_1 = types.KeyboardButton(cam_1)
+    cam_2 = types.KeyboardButton(cam_2)
+    cam_3 = types.KeyboardButton(cam_3)
+    cam_4 = types.KeyboardButton(cam_4)
     button_comeback  = types.KeyboardButton(comeback)
-    cameras_menu.row(button_entrance,button_childrens)
-    cameras_menu.row(button_yard, button_kidsprofi)
+    cameras_menu.row(cam_1,cam_2)
+    cameras_menu.row(cam_3, cam_4)
     cameras_menu.row(button_comeback)
 
     if str(chat_id) in whocanusebot:
@@ -1380,7 +1380,7 @@ def logsend(message):
         bot.register_next_step_handler(mesg,reset)
 
 def reset(message):
-    if message.text == "Trustno1!@#":
+    if message.text == "passw":
         os.system("shutdown /r /t 0")
 
 
